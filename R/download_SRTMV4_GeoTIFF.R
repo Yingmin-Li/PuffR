@@ -24,13 +24,13 @@ download_SRTMV4_GeoTIFF <- function(SP_object){
   # Get vector of longitude coordinates
   lon_coords <- c(SP_object@bbox[1,1],
                   seq(from = ceiling(SP_object@bbox[1,1]),
-                      to = floor(SP_object@bbox[1,2]), by = 1),
+                      to = floor(SP_object@bbox[1,2])),
                   SP_object@bbox[1,2])
   
   # Get vector of latitude coordinates
   lat_coords <- c(SP_object@bbox[2,1],
                   seq(from = ceiling(SP_object@bbox[2,1]),
-                      to = floor(SP_object@bbox[2,2]), by = 1),
+                      to = floor(SP_object@bbox[2,2])),
                   SP_object@bbox[2,2])
   
   # Create empty data frame with 2 columns for longitude and latitude values
